@@ -1,0 +1,39 @@
+{
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.TaskWrite",
+      "description": "Task Create/Update"
+    },
+    {
+      "name": "$XSAPPNAME.TaskRead",
+      "description": "TaskRead"
+    },
+    {
+      "name": "$XSAPPNAME.TaskDelete",
+      "description": "TaskDelete"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "TaskAdmin",
+      "description": "Role for Administration of Task",
+      "scope-references": [
+        "$XSAPPNAME.TaskWrite",
+        "$XSAPPNAME.TaskRead",
+        "$XSAPPNAME.TaskDelete"
+      ]
+    },
+    {
+      "name": "TaskRead",
+      "description": "Role for Administration of Task",
+      "scope-references": [
+        "$XSAPPNAME.TaskRead"
+      ]
+    }
+  ],
+  "oauth2-configuration": {
+    "redirect-uris": ["https://*.cfapps.us10-001.hana.ondemand.com/**"]
+ }
+  
+}

@@ -120,7 +120,7 @@
                       "press": "product.ext.xmlfetch.xmlfetch.fetch",
                       "visible": true,
                       "enabled": true,
-                      "requiresSelection": false,
+                      "requiresSelection": true,
                       "text": "Fetch"
                     }
                   }
